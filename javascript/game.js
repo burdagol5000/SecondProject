@@ -39,8 +39,10 @@ function Guess(chosen) {
   }
 
   function chances() {
-    document.getElementById('chances').innerHTML = chances;
+    document.getElementById('chances').innerHTML = chance;
   }
+
+  
 random();
 Buttons();
 problem();
