@@ -2,8 +2,7 @@
 var normal=["ELEPHANT","ZEBRA","CANADA","EUROPE","ASIA","AMERICA","BLUE","BLACK","VIOLET","PANDA"]
 // variables to store the word chosen and the mistakes guessed and the correct guess limiter
 var word='';
-let limit = 5;
-let mistakes = 0;
+let chance = 5;
 let correct = [];
 words=null;
 //function to generate a random word from the array
@@ -34,8 +33,8 @@ function Guess(chosen) {
     if (word.indexOf(chosen) >= 0) {
       problem();
     } else if (word.indexOf(chosen) === -1) {
-      mistakes++;
-      updateMistakes();
+      chance--;
+      chances();
     }
   }
 
