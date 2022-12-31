@@ -21,12 +21,24 @@ function Buttons() {
     document.getElementById('letters').innerHTML = buttons;
 }
 
-function word() {
-    wordStatus = word.split('').map(letter => (guessed.indexOf(letter) >= 0 ? letter : " _ ")).join('');
+function problem() {
+    wordStatus = word.split('').map(letter => (correct.indexOf(letter) >= 0 ? letter : " _ ")).join('');
   
     document.getElementById('problem').innerHTML = wordStatus;
+}
+
+function Guess(chosenLetter) {
+    correct.indexOf(chosenLetter) === -1 ? correct.push(chosenLetter) : null;
+    document.getElementById(chosenLetter).setAttribute('disabled', true);
+  
+    if (answer.indexOf(chosenLetter) >= 0) {
+      guessedWord();
+    } else if (answer.indexOf(chosenLetter) === -1) {
+      mistakes++;
+      updateMistakes();
+    }
   }
 
 random();
 Buttons();
-word();
+problem();
