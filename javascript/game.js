@@ -7,17 +7,19 @@ let mistakes = 0;
 let correct = [];
 
 function random() {
-    answer = normal[Math.floor(Math.random() * normal.length)];
+    word = normal[Math.floor(Math.random() * normal.length)];
+
   }
-  function generateButtons() {
-    let buttonsHTML = 'abcdefghijklmnopqrstuvwxyz'.split('').map(letter =>
-      `
-        <button` + letter + `'  onClick="handleGuess('` + letter + `')">  ` + letter + `
+  function Buttons() {
+    let buttons = 'abcdefghijklmnopqrstuvwxyz'.split('').map(letter =>
+        `
+        <button id='` + letter + `'onClick="handleGuess('` + letter + `')">
+        ` + letter + `
         </button>
-      `).join('');
-    document.getElementById('letter').innerHTML = buttonsHTML;
+        `).join('');
+    document.getElementById('letters').innerHTML = buttons;
   }
 
 
 random();
-generateButtons();
+Buttons();
