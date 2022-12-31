@@ -54,9 +54,11 @@ function zerochances() {
     }
 }
 
+//function that will check if player has guessed the word correctly
 function guessedword() {
     if (words === word) {
-      document.getElementById('letters').innerHTML = '<a href="index.html">Back</a>';
+    document.getElementById('bombs').src = 'assets/gjob2.jpg';
+    document.getElementById('letters').innerHTML = '<a href="index.html">Back</a>';
     }
   }
 
