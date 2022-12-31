@@ -6,3 +6,6 @@ div #start{
     text-align: center;
    
 }
+div div #difficulty{
+    display:none;
+}
