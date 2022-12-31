@@ -31,6 +31,7 @@ function Guess(chosen) {
 
     //if clicked letter is on the random word problem() function will be ran again to update the shown and hidden letters on h3 problem
       problem();
+      guessedword();
     } else if (word.indexOf(chosen) === -1) {
 
     //else if the clicked button/letter is not on the random word, deduct the number of chances,execute chances() function and zerochances() function
@@ -48,12 +49,16 @@ function chances() {
 //function that will check if chance reaches 0, then player loses the game
 function zerochances() {
     if (chance === 0) { 
-        document.getElementById('bombs').src = 'assets/nuke.jpg';
-      document.getElementById('letters').innerHTML = '<a href="index.html">Back</a>';
-      
+    document.getElementById('bombs').src = 'assets/nuke.jpg';
+    document.getElementById('letters').innerHTML = '<a href="index.html">Back</a>';
     }
 }
 
+function guessedword() {
+    if (words === word) {
+      document.getElementById('letters').innerHTML = '<a href="index.html">Back</a>';
+    }
+  }
 
 
 random();
