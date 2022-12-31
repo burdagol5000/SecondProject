@@ -9,4 +9,12 @@ div #start{
 }
 div #levels{
     display:none;
+
+}
+div #levels a{
+    border-radius: 25px;
+    display:inline-block;
+    text-decoration: none;
+    border-style:solid;
+    width:200px;
 }
