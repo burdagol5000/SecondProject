@@ -1,8 +1,8 @@
 function difficulty() {
-    var x = document.getElementById("myDIV");
-    if (x.style.display === "none") {
-      x.style.display = "block";
+    var display = document.getElementById("difficulty");
+    if (display.style.display === "none") {
+      display.style.display = "block";
     } else {
-      x.style.display = "none";
+      display.style.display = "none";
     }
   }
