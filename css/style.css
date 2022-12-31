@@ -17,8 +17,17 @@ div #start{
 }
 div #start button{
     font-size:50px;
-    border-radius: 15px;
+    border-radius: 25px;
     border-style: solid;
+    padding:10px 15px;
+    cursor: pointer;
+}
+div #start button:hover{
+    font-size:50px;
+    border-radius: 25px;
+    border-style: solid;
+    padding:10px 15px;
+    background-color:rgb(126, 144, 144);
     cursor: pointer;
 }
 div #levels{
@@ -33,6 +42,15 @@ div #levels a{
     border-style:solid;
     font-size:40px;
     width:200px;
+}
+div #levels a:hover{
+    border-radius: 25px;
+    display:inline-block;
+    text-decoration: none;
+    border-style:solid;
+    font-size:40px;
+    width:200px;
+    background-color:aquamarine;
 }
 div #levels p{
     font-size:20px;
