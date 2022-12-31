@@ -5,20 +5,20 @@ var word='';
 let limit = 10;
 let mistakes = 0;
 let correct = [];
-
+//function to generate a random word from the array
 function random() {
     word = normal[Math.floor(Math.random() * normal.length)];
-
-  }
-  function Buttons() {
-    let buttons = 'abcdefghijklmnopqrstuvwxyz'.split('').map(letter =>
+}
+//function to generate the buttons to be used to play the game
+function Buttons() {
+    let buttons = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('').map(letter =>
         `
-        <button id='` + letter + `'onClick="handleGuess('` + letter + `')">
+        <button id='` + letter + `'onClick="Guess('` + letter + `')">
         ` + letter + `
         </button>
         `).join('');
     document.getElementById('letters').innerHTML = buttons;
-  }
+}
 
 
 random();

@@ -1,4 +1,4 @@
-/*style for index.html */
+
 img{
     width:100%;
 }
@@ -35,4 +35,17 @@ div #levels a{
 }
 div #levels p{
     font-size:20px;
+}
+
+/*style for the game itself */
+div #letters button{
+   padding:10px;
+    font-size:20px;
+    display: inline-block;
+    cursor: pointer;
+}
+div #letters button:hover{
+    background-color: rgb(65, 44, 44);
+    color:antiquewhite;
+    cursor: pointer;
 }
