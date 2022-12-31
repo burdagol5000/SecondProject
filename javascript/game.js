@@ -2,7 +2,7 @@
 var normal=["ELEPHANT","ZEBRA","CANADA","EUROPE","ASIA","AMERICA","BLUE","BLACK","VIOLET","PANDA"]
 // variables to store the word chosen and the mistakes guessed and the correct guess limiter
 var word='';
-let chance = 5;
+let chance = 8;
 let correct = [];
 words=null;
 
