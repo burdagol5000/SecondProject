@@ -5,6 +5,7 @@ var word='';
 let limit = 10;
 let mistakes = 0;
 let correct = [];
+wordstatus=null;
 //function to generate a random word from the array
 function random() {
     word = normal[Math.floor(Math.random() * normal.length)];
@@ -20,6 +21,12 @@ function Buttons() {
     document.getElementById('letters').innerHTML = buttons;
 }
 
+function word() {
+    wordStatus = word.split('').map(letter => (guessed.indexOf(letter) >= 0 ? letter : " _ ")).join('');
+  
+    document.getElementById('problem').innerHTML = wordStatus;
+  }
 
 random();
 Buttons();
+word();
