@@ -45,6 +45,7 @@ function Guess(chosen) {
   function zerochances() {
     if (chance === 0) { 
       document.getElementById('letters').innerHTML = '<a href="index.html">Back</a>';
+      
     }
   }
   
