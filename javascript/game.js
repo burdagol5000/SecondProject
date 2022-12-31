@@ -1,11 +1,11 @@
 // words to be chosen randomly
-var normal=["elephant","zebra","canada","europe","asia","america","blue","black","violet","panda"]
+var normal=["ELEPHANT","ZEBRA","CANADA","EUROPE","ASIA","AMERICA","BLUE","BLACK","VIOLET","PANDA"]
 // variables to store the word chosen and the mistakes guessed and the correct guess limiter
 var word='';
-let limit = 10;
+let limit = 5;
 let mistakes = 0;
 let correct = [];
-wordstatus=null;
+words=null;
 //function to generate a random word from the array
 function random() {
     word = normal[Math.floor(Math.random() * normal.length)];
@@ -22,23 +22,26 @@ function Buttons() {
 }
 
 function problem() {
-    wordStatus = word.split('').map(letter => (correct.indexOf(letter) >= 0 ? letter : " _ ")).join('');
+    words = word.split('').map(letter => (correct.indexOf(letter) >= 0 ? letter : " _ ")).join('');
   
-    document.getElementById('problem').innerHTML = wordStatus;
+    document.getElementById('problem').innerHTML = words;
 }
 
-function Guess(chosenLetter) {
-    correct.indexOf(chosenLetter) === -1 ? correct.push(chosenLetter) : null;
-    document.getElementById(chosenLetter).setAttribute('disabled', true);
+function Guess(chosen) {
+    correct.indexOf(chosen) === -1 ? correct.push(chosen) : null;
+    document.getElementById(chosen).setAttribute('disabled', true);
   
-    if (answer.indexOf(chosenLetter) >= 0) {
-      guessedWord();
-    } else if (answer.indexOf(chosenLetter) === -1) {
+    if (word.indexOf(chosen) >= 0) {
+      problem();
+    } else if (word.indexOf(chosen) === -1) {
       mistakes++;
       updateMistakes();
     }
   }
 
+  function chances() {
+    document.getElementById('chances').innerHTML = chances;
+  }
 random();
 Buttons();
 problem();
