@@ -89,17 +89,30 @@ div #letters a{
     margin:30px;
     cursor: pointer;
 }
-
-@media screen and (min-width: 900px) {
-    
+@media (min-width:1200px){
+    .container{
+        width:100%;
+    }
     div #bomb{
-        width:30%%;
+        width:30%;
         margin:auto;
     }
 }
-@media screen and (min-width: 400px) {
+@media (max-width:800px){
+    .container{
+        width:100%;
+    }
     div #bomb{
-        width:80%;
+        width:40%;
+        margin:auto;
+    }
+}
+@media (max-width:600px){
+    .container{
+        width:100%;
+    }
+    div #bomb{
+        width:60%;
         margin:auto;
     }
 }
