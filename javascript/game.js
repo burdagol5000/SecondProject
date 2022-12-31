@@ -44,6 +44,7 @@ function Guess(chosen) {
   }
   function zerochances() {
     if (chance === 0) { 
+        document.getElementById('bombs').src = 'assets/nuke.jpg';
       document.getElementById('letters').innerHTML = '<a href="index.html">Back</a>';
       
     }
