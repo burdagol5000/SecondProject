@@ -57,4 +57,6 @@ div #letters a{
     border-style:solid;
     border-color:black;
     color:black;
+    font-size:40px;
+    padding:20px;
 }
