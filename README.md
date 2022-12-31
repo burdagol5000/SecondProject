@@ -11,3 +11,50 @@ In Defuse the Bomb you will have to guess the word by clicking on the letter unt
 
 <img src="assets/game.png"></img>
 
+<h2>Technologies Used</h2>
+<ul>
+<li>HTML</li>
+<li>CSS</li>
+<li>Javascript</li>
+</ul>
+
+<h1>Validation</h1>
+<h2>HTML Validation for the Index.html</h2>
+
+<img src="./assets/homepagevalid.png"></img>
+</br>
+<h2>HTML Validation for the normal.html</h2>
+</br>
+<img src="./assets/normal.png"></img>
+</br>
+<h2>HTML Validation for the hard.html</h2>
+</br>
+<img src="./assets/hard.png"></img>
+</br>
+<h2>CSS Validation</h2>
+<img src="./assets/hard.png"></img>
+
+<h2>Performance Validation using Lighthouse</h2>
+<img src="./assets/performance.png"></img>
+
+<h2>Testing it on my Mobile Phone</h2>
+<img src="./assets/mobile.jpg"></img>
+
+<h2>Deployment</h2>
+
+My Site was Deployed using Github Pages. The steps I took were as follows:<br/>
+1. On the repository Page, Click on the settings icon. <br/>
+2. On the left hand side corner click pages on the menu.<br/>
+3. On the branch selected Main, then on the folder selected root then clicked save.
+4. After a few minutes Github has generated my website which has a URL of: https://burdagol5000.github.io/SecondProject/
+
+<h2>Credits</h2>
+
+<ul>
+
+<li>Javascript Tutorial from SuperSimpleDev on Youtube (https://www.youtube.com/@SuperSimpleDev)</li>
+<li>Javascript Tutorial from Programming with Mosh (https://www.youtube.com/@programmingwithmosh)</li>
+<li>Javascript Tutorial from freeCodeCamp.org (https://www.youtube.com/@freecodecamp)</li>
+<li>Form Validation from Code Institute LMS</li>
+<li>stack overflow forums for answering some of my questions. https://stackoverflow.com/questions/</li>
+</ul>
