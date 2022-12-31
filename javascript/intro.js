@@ -1,8 +1,9 @@
 function difficulty() {
-    var display = document.getElementById("difficulty");
-    if (display.style.display === "none") {
-      display.style.display = "block";
+    var appear = document.getElementById("levels");
+    var start = document.getElementById("start");
+    if (appear.style.display === "none") {
+        appear.style.display = "block"; 
     } else {
-      display.style.display = "none";
+        appear.style.display = "none";
     }
-  }
+}

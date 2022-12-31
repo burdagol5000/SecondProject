@@ -4,8 +4,9 @@
 
 div #start{
     text-align: center;
+    display:block;
    
 }
-div div #difficulty{
+div #levels{
     display:none;
 }
