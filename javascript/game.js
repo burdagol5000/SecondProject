@@ -9,3 +9,15 @@ let correct = [];
 function random() {
     answer = normal[Math.floor(Math.random() * normal.length)];
   }
+  function generateButtons() {
+    let buttonsHTML = 'abcdefghijklmnopqrstuvwxyz'.split('').map(letter =>
+      `
+        <button` + letter + `'  onClick="handleGuess('` + letter + `')">  ` + letter + `
+        </button>
+      `).join('');
+    document.getElementById('letter').innerHTML = buttonsHTML;
+  }
+
+
+random();
+generateButtons();
