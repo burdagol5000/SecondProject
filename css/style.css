@@ -51,3 +51,10 @@ div #letters button:hover{
     color:antiquewhite;
     cursor: pointer;
 }
+div #letters a{
+    text-decoration: none;
+    border-radius: 5px;
+    border-style:solid;
+    border-color:black;
+    color:black;
+}

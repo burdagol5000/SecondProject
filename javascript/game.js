@@ -35,13 +35,18 @@ function Guess(chosen) {
     } else if (word.indexOf(chosen) === -1) {
       chance--;
       chances();
+      zerochances()
     }
   }
 
   function chances() {
     document.getElementById('chances').innerHTML = chance;
   }
-
+  function zerochances() {
+    if (chance === 0) { 
+      document.getElementById('letters').innerHTML = '<a href="index.html">Back</a>';
+    }
+  }
   
 random();
 Buttons();
