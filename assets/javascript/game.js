@@ -1,31 +1,35 @@
-let randomWords=[];
-let chance=[];
-var word='';
+let normalWords=["ELEPHANT","ZEBRA","CANADA","EUROPE","ASIA","AMERICA","BLUE","BLACK","VIOLET","PANDA"]
+let hardWords=["FILTER","EUPHORIA","COLLAGEN"," MAGNESIUM","PHILIPPINES","DEMENTIA","RAGNAROK","ANDROMEDA","ESSENTIAL","GASTROENTERITIS"]
+let word='';
+let randomWords='';
 let correct = [];
-words=null;
-
-
-function difficulty(level,numberofChances) 
+let words=null;
+function level(level) 
 {
-    let generatedWords={
-        normal:['ELEPHANT','ZEBRA','CANADA','EUROPE','ASIA','AMERICA','BLUE','BLACK','VIOLET','PANDA'],
-        hard:['FILTER','EUPHORIA','COLLAGEN','MAGNESIUM','PHILIPPINES','DEMENTIA','RAGNAROK','ANDROMEDA','ESSENTIAL','GASTROENTERITIS']};
-    let chancesOnDifficulty={normalChance:['5'],hardChance:['8']};
-    chosenDifficulty = level;
-    randomWords = generatedWords[chosenDifficulty];
-    life=numberofChances;
-    chance=chancesOnDifficulty[life];
     const gameboard=document.getElementById("gameboard");
     const levels= document.getElementById("levels");
     if (gameboard.style.display === "none") 
     {
         gameboard.style.display = "block";
         levels.style.display = "none";
-    } else 
+        
+    } else
     {
         gameboard.style.display = "none";
     }
-    console.log(randomWords,chance)
+    let chosenDifficulty = level;
+
+    if (chosenDifficulty === 0)
+    {
+        randomWords=normalWords;
+        chance=8;
+    }
+    else if (chosenDifficulty === 1)
+    {
+        randomWords=hardWords;
+        chance=5;
+    }
+    console.log(randomWords,chance) 
 }
 //function to generate a random word from the array
 function random() 
@@ -37,7 +41,7 @@ function random()
 function button() 
 {
     let buttons = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('').map(letter =>   
-        `<button id='` + letter + `'onClick="Guess('` + letter + `')"> ` + letter + `</button> `).join(''); 
+        `<button id='` + letter + `'onClick="guess('` + letter + `')"> ` + letter + `</button> `).join(''); 
     document.getElementById('letters').innerHTML = buttons;
 }
 
@@ -90,6 +94,9 @@ function guessedword()
     document.getElementById('letters').innerHTML = '<a href="index.html">Back</a>';
     }
 }
-random();
+problem();     
 button();
-problem();
+random(); 
+
+    
+
