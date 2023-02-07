@@ -49,7 +49,7 @@ function chances() {
 //function that will check if chance reaches 0, then player loses the game
 function zerochances() {
     if (chance === 0) { 
-    document.getElementById('bombs').src = 'assets/nuke.jpg';
+    document.getElementById('bombs').src = 'assets/images/nuke.jpg';
     document.getElementById('letters').innerHTML = '<a href="index.html">Back</a>';
     }
 }
@@ -57,7 +57,7 @@ function zerochances() {
 //function that will check if player has guessed the word correctly
 function guessedword() {
     if (words === word) {
-    document.getElementById('bombs').src = 'assets/gjob2.jpg';
+    document.getElementById('bombs').src = 'assets/images/gjob2.jpg';
     document.getElementById('letters').innerHTML = '<a href="index.html">Back</a>';
     }
   }
