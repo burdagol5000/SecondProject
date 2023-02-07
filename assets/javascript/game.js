@@ -1,27 +1,23 @@
 //the function that will determine the words and number of chances when the normal difficulty is chosen 
-function normal(){
-    // words to be chosen randomly
-    let normal=["ELEPHANT","ZEBRA","CANADA","EUROPE","ASIA","AMERICA","BLUE","BLACK","VIOLET","PANDA"]
-    let word='';
-    let chance = 8;
-    let gameboard=document.getElementById("gameboard");
-    let levels= document.getElementById("levels");
-    if (levels.style.display === "none") 
-    {
-        gameboard.style.display = "block";
-        levels.style.display = "none";
-    } else 
-    {
-        gameboard.style.display = "none";
-    }
-}
-function hard(){
-    // words to be chosen randomly
-    let hard=["FILTER","EUPHORIA","COLLAGEN"," MAGNESIUM","PHILIPPINES","DEMENTIA","RAGNAROK","ANDROMEDA","ESSENTIAL","GASTROENTERITIS"]
-    let word='';
-    let chance = 5;
-    let gameboard=document.getElementById("gameboard");
-    let levels= document.getElementById("levels");
+
+// variables to store the word chosen and the mistakes guessed and the correct guess limiter
+let generatedWords={
+    normal:['ELEPHANT','ZEBRA','CANADA','EUROPE','ASIA','AMERICA','BLUE','BLACK','VIOLET','PANDA'],
+    hard:['FILTER','EUPHORIA','COLLAGEN','MAGNESIUM','PHILIPPINES','DEMENTIA','RAGNAROK','ANDROMEDA','ESSENTIAL','GASTROENTERITIS']};
+let chancesOnDifficulty={normalChance:['5'],hardChance:['8']};
+let chance =life;
+var word='';
+let correct = [];
+words=null;
+
+function difficulty(level,chances) 
+{
+    chosenDifficulty = level;
+    randomWords = generatedWords[chosenDifficulty];
+    numberofChances=life;
+    life=chancesOnDifficulty[numberofChances];
+    const gameboard=document.getElementById("gameboard");
+    const levels= document.getElementById("levels");
     if (gameboard.style.display === "none") 
     {
         gameboard.style.display = "block";
@@ -31,32 +27,29 @@ function hard(){
         gameboard.style.display = "none";
     }
 }
-// variables to store the word chosen and the mistakes guessed and the correct guess limiter
-var word='';
-let correct = [];
-words=null;
-
-
-
 //function to generate a random word from the array
-function random() {
-    word = normal[Math.floor(Math.random() * normal.length)];
+function random() 
+{
+    word = randomWords[Math.floor(Math.random() * randomWords.length)];
 }
 
 //function to generate the buttons to be used to play the game
-function buttons() {
+function button() 
+{
     let buttons = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('').map(letter =>   
         `<button id='` + letter + `'onClick="Guess('` + letter + `')"> ` + letter + `</button> `).join(''); 
     document.getElementById('letters').innerHTML = buttons;
 }
 
 //function that will generate the spaces where letters will appear if successfully guessed
-function problem() {
+function problem() 
+{
     words = word.split('').map(letter => (correct.indexOf(letter) >= 0 ? letter : " _ ")).join('');
     document.getElementById('problem').innerHTML = words;
 }
 //function to check if the pushed/clicked button is on the random word that was chosen
-function guess(chosen) {
+function guess(chosen) 
+{
     correct.indexOf(chosen) === -1 ? correct.push(chosen) : null;
     document.getElementById(chosen).setAttribute('disabled', true);
     if (word.indexOf(chosen) >= 0) {
@@ -68,18 +61,20 @@ function guess(chosen) {
 
     //else if the clicked button/letter is not on the random word, deduct the number of chances,execute chances() function and zerochances() function
     chance--;
-    chances();
+    updateChance();
     zerochances()
     }
 }
 
 //function that will update the span chance on how many chances left
-function chances() {
+function updateChance() 
+{
     document.getElementById('chances').innerHTML = chance;
 }
 
 //function that will check if chance reaches 0, then player loses the game
-function zerochances() {
+function zerochances() 
+{
     if (chance === 0) { 
     document.getElementById('bombs').src = 'assets/images/nuke.jpg';
     document.getElementById('letters').innerHTML = '<a href="index.html">Back</a>';
@@ -87,14 +82,13 @@ function zerochances() {
 }
 
 //function that will check if player has guessed the word correctly
-function guessedword() {
+function guessedword() 
+{
     if (words === word) {
     document.getElementById('bombs').src = 'assets/images/gjob2.jpg';
     document.getElementById('letters').innerHTML = '<a href="index.html">Back</a>';
     }
-  }
-
-
+}
 random();
-Buttons();
+button();
 problem();
