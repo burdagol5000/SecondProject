@@ -1,10 +1,42 @@
-// words to be chosen randomly
-var normal=["ELEPHANT","ZEBRA","CANADA","EUROPE","ASIA","AMERICA","BLUE","BLACK","VIOLET","PANDA"]
+//the function that will determine the words and number of chances when the normal difficulty is chosen 
+function normal(){
+    // words to be chosen randomly
+    let normal=["ELEPHANT","ZEBRA","CANADA","EUROPE","ASIA","AMERICA","BLUE","BLACK","VIOLET","PANDA"]
+    let word='';
+    let chance = 8;
+    let gameboard=document.getElementById("gameboard");
+    let levels= document.getElementById("levels");
+    if (levels.style.display === "none") 
+    {
+        gameboard.style.display = "block";
+        levels.style.display = "none";
+    } else 
+    {
+        gameboard.style.display = "none";
+    }
+}
+function hard(){
+    // words to be chosen randomly
+    let hard=["FILTER","EUPHORIA","COLLAGEN"," MAGNESIUM","PHILIPPINES","DEMENTIA","RAGNAROK","ANDROMEDA","ESSENTIAL","GASTROENTERITIS"]
+    let word='';
+    let chance = 5;
+    let gameboard=document.getElementById("gameboard");
+    let levels= document.getElementById("levels");
+    if (gameboard.style.display === "none") 
+    {
+        gameboard.style.display = "block";
+        levels.style.display = "none";
+    } else 
+    {
+        gameboard.style.display = "none";
+    }
+}
 // variables to store the word chosen and the mistakes guessed and the correct guess limiter
 var word='';
-let chance = 8;
 let correct = [];
 words=null;
+
+
 
 //function to generate a random word from the array
 function random() {

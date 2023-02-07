@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/assets/css/style.css"> 
-    <script src=".assets/javascript/intro.js"></script>
-    <script src=".assets/javascript/game.js"></script>
+    <script src="assets/javascript/intro.js"></script>
+    <script src="assets/javascript/game.js"></script>
     <title>Defuse the Bomb</title>
 </head>
 <body>
@@ -24,6 +24,16 @@
             <p>easy words to guess which could be an animal,a place or a color</p>
             <button onclick="hard()">NORMAL</button>
             <p>hard words to guess which could be anything at all</p>
+        </div>
+        <div class="gameboard" style="display:none;">
+            <!-- the bomb image-->
+            <div id="bomb" ><img id="bombs" src="assets/bomb.png" alt="images"></div>
+            <!-- the word gets displayed here-->
+            <h3 id="problem">Word</h3>
+            <!-- the amount of chances-->
+            <h3 id="limit">Chances: <span id='chances'>5</span></h3>
+            <!-- the buttons will appear here-->
+            <div id="letters"> </div>
         </div>
     </div>
 </body>
