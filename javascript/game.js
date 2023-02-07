@@ -12,7 +12,7 @@ function random() {
 }
 
 //function to generate the buttons to be used to play the game
-function Buttons() {
+function buttons() {
     let buttons = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('').map(letter =>   
         `<button id='` + letter + `'onClick="Guess('` + letter + `')"> ` + letter + `</button> `).join(''); 
     document.getElementById('letters').innerHTML = buttons;
@@ -24,7 +24,7 @@ function problem() {
     document.getElementById('problem').innerHTML = words;
 }
 //function to check if the pushed/clicked button is on the random word that was chosen
-function Guess(chosen) {
+function guess(chosen) {
     correct.indexOf(chosen) === -1 ? correct.push(chosen) : null;
     document.getElementById(chosen).setAttribute('disabled', true);
     if (word.indexOf(chosen) >= 0) {
