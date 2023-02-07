@@ -1,21 +1,20 @@
-//the function that will determine the words and number of chances when the normal difficulty is chosen 
-
-// variables to store the word chosen and the mistakes guessed and the correct guess limiter
-let generatedWords={
-    normal:['ELEPHANT','ZEBRA','CANADA','EUROPE','ASIA','AMERICA','BLUE','BLACK','VIOLET','PANDA'],
-    hard:['FILTER','EUPHORIA','COLLAGEN','MAGNESIUM','PHILIPPINES','DEMENTIA','RAGNAROK','ANDROMEDA','ESSENTIAL','GASTROENTERITIS']};
-let chancesOnDifficulty={normalChance:['5'],hardChance:['8']};
-let chance =life;
+let randomWords=[];
+let chance=[];
 var word='';
 let correct = [];
 words=null;
 
-function difficulty(level,chances) 
+
+function difficulty(level,numberofChances) 
 {
+    let generatedWords={
+        normal:['ELEPHANT','ZEBRA','CANADA','EUROPE','ASIA','AMERICA','BLUE','BLACK','VIOLET','PANDA'],
+        hard:['FILTER','EUPHORIA','COLLAGEN','MAGNESIUM','PHILIPPINES','DEMENTIA','RAGNAROK','ANDROMEDA','ESSENTIAL','GASTROENTERITIS']};
+    let chancesOnDifficulty={normalChance:['5'],hardChance:['8']};
     chosenDifficulty = level;
     randomWords = generatedWords[chosenDifficulty];
-    numberofChances=life;
-    life=chancesOnDifficulty[numberofChances];
+    life=numberofChances;
+    chance=chancesOnDifficulty[life];
     const gameboard=document.getElementById("gameboard");
     const levels= document.getElementById("levels");
     if (gameboard.style.display === "none") 
@@ -26,6 +25,7 @@ function difficulty(level,chances)
     {
         gameboard.style.display = "none";
     }
+    console.log(randomWords,chance)
 }
 //function to generate a random word from the array
 function random() 
@@ -52,13 +52,14 @@ function guess(chosen)
 {
     correct.indexOf(chosen) === -1 ? correct.push(chosen) : null;
     document.getElementById(chosen).setAttribute('disabled', true);
-    if (word.indexOf(chosen) >= 0) {
-
+    if (word.indexOf(chosen) >= 0) 
+    {
     //if clicked letter is on the random word problem() function will be ran again to update the shown and hidden letters on h3 problem
       problem();
       guessedword();
-    } else if (word.indexOf(chosen) === -1) {
-
+    } 
+    else if (word.indexOf(chosen) === -1) 
+    {
     //else if the clicked button/letter is not on the random word, deduct the number of chances,execute chances() function and zerochances() function
     chance--;
     updateChance();
