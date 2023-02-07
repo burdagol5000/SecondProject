@@ -30,26 +30,7 @@ div #start button:hover{
     background-color:rgb(126, 144, 144);
     cursor: pointer;
 }
-div #levels{
-    padding-top:40px;
-}
-div #levels a{
-    border-radius: 25px;
-    display:inline-block;
-    text-decoration: none;
-    border-style:solid;
-    font-size:40px;
-    width:200px;
-}
-div #levels a:hover{
-    border-radius: 25px;
-    display:inline-block;
-    text-decoration: none;
-    border-style:solid;
-    font-size:40px;
-    width:200px;
-    background-color:aquamarine;
-}
+
 div #levels p{
     font-size:20px;
 }
