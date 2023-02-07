@@ -1,39 +1,12 @@
-let normalWords=["ELEPHANT","ZEBRA","CANADA","EUROPE","ASIA","AMERICA","BLUE","BLACK","VIOLET","PANDA"]
-let hardWords=["FILTER","EUPHORIA","COLLAGEN"," MAGNESIUM","PHILIPPINES","DEMENTIA","RAGNAROK","ANDROMEDA","ESSENTIAL","GASTROENTERITIS"]
+
 let word='';
 let randomWords='';
 let correct = [];
 let words=null;
-function level(level) 
-{
-    const gameboard=document.getElementById("gameboard");
-    const levels= document.getElementById("levels");
-    if (gameboard.style.display === "none") 
-    {
-        gameboard.style.display = "block";
-        levels.style.display = "none";
-        
-    } else
-    {
-        gameboard.style.display = "none";
-    }
-    let chosenDifficulty = level;
 
-    if (chosenDifficulty === 0)
-    {
-        randomWords=normalWords;
-        chance=8;
-    }
-    else if (chosenDifficulty === 1)
-    {
-        randomWords=hardWords;
-        chance=5;
-    }
-    console.log(randomWords,chance) 
-}
+
 //function to generate a random word from the array
-function random() 
-{
+function random() {
     word = randomWords[Math.floor(Math.random() * randomWords.length)];
 }
 
@@ -43,13 +16,6 @@ function button()
     let buttons = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('').map(letter =>   
         `<button id='` + letter + `'onClick="guess('` + letter + `')"> ` + letter + `</button> `).join(''); 
     document.getElementById('letters').innerHTML = buttons;
-}
-
-//function that will generate the spaces where letters will appear if successfully guessed
-function problem() 
-{
-    words = word.split('').map(letter => (correct.indexOf(letter) >= 0 ? letter : " _ ")).join('');
-    document.getElementById('problem').innerHTML = words;
 }
 //function to check if the pushed/clicked button is on the random word that was chosen
 function guess(chosen) 
@@ -70,7 +36,12 @@ function guess(chosen)
     zerochances()
     }
 }
-
+//function that will generate the spaces where letters will appear if successfully guessed
+function problem() 
+{
+    words = word.split('').map(letter => (correct.indexOf(letter) >= 0 ? letter : " _ ")).join('');
+    document.getElementById('problem').innerHTML = words;
+}
 //function that will update the span chance on how many chances left
 function updateChance() 
 {
@@ -94,9 +65,9 @@ function guessedword()
     document.getElementById('letters').innerHTML = '<a href="index.html">Back</a>';
     }
 }
-problem();     
-button();
 random(); 
+button();
+problem();  
 
     
 
