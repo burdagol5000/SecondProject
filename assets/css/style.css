@@ -2,8 +2,17 @@ img{
     width:100%;
 }
 #homelink{
-    background-color: black;
+    text-align: center;
+    padding-top:30px;
     width:100%;
+}
+#homelink button{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 25px;
+}
+#homelink button a{
+    text-decoration: none;
+    color:black;
 }
 div #levels button{
     font-size:50px;
@@ -77,10 +86,7 @@ div #letters a{
     margin:30px;
     cursor: pointer;
 }
-#homelink{
-    padding-top:40px;
-    font-size: 30px;
-}
+
 @media (min-width:1200px){
     .container{
         width:100%;
