@@ -1,6 +1,13 @@
 img{
     width:100%;
 }
+#homelink{
+    background-color: black;
+    width:100%;
+}
+div #levels button{
+    font-size:50px;
+}
 .container{
     text-align: center;
     width:100%;
@@ -70,9 +77,9 @@ div #letters a{
     margin:30px;
     cursor: pointer;
 }
-div .homelink a{
+#homelink{
     padding-top:40px;
-    font-size: 30px;;
+    font-size: 30px;
 }
 @media (min-width:1200px){
     .container{
