@@ -6,7 +6,7 @@ let words=null;
 var normalWords=["ELEPHANT","ZEBRA","CANADA","EUROPE","ASIA","AMERICA","BLUE","BLACK","VIOLET","PANDA"];
 var hardWords=["FILTER","EUPHORIA","COLLAGEN"," MAGNESIUM","PHILIPPINES","DEMENTIA","RAGNAROK","ANDROMEDA","ESSENTIAL","GASTROENTERITIS"];
 //function to generate a random word from the array
-function random() 
+function randomWord() 
 {
      word = randomWords[Math.floor(Math.random() * randomWords.length)];
 }
@@ -14,19 +14,19 @@ function random()
 function button() 
 {
     let buttons = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('').map(letter =>   
-        `<button id='` + letter + `'onClick="guess('` + letter + `')"> ` + letter + `</button> `).join(''); 
+        `<button id='` + letter + `'onClick="buttonGuessing('` + letter + `')"> ` + letter + `</button> `).join(''); 
     document.getElementById('letters').innerHTML = buttons;
 }
 //function to check if the pushed/clicked button is on the random word that was chosen
-function guess(chosen) 
+function buttonGuessing(chosen)
 {
     correct.indexOf(chosen) === -1 ? correct.push(chosen) : null;
     document.getElementById(chosen).setAttribute('disabled', true);
     if (word.indexOf(chosen) >= 0) 
     {
     //if clicked letter is on the random word problem() function will be ran again to update the shown and hidden letters on h3 problem
-      problem();
-      guessedword();
+      wordChallenge();
+      playerWon();
     } 
     else if (word.indexOf(chosen) === -1) 
     {
@@ -37,7 +37,7 @@ function guess(chosen)
     }
 }
 //function that will generate the spaces where letters will appear if successfully guessed
-function problem() 
+function wordChallenge() 
 {
     words = word.split('').map(letter => (correct.indexOf(letter) >= 0 ? letter : " _ ")).join('');
     document.getElementById('problem').innerHTML = words;
@@ -59,7 +59,7 @@ function zerochances()
 }
 
 //function that will check if player has guessed the word correctly
-function guessedword() 
+function playerWon() 
 {
     if (words === word) {
     document.getElementById('bombs').src = 'assets/images/gjob2.jpg';
@@ -88,17 +88,19 @@ function level(level)
     {
         randomWords=normalWords;
         chance=8;
-        random(); 
+        document.getElementById('chances').innerHTML= chance;
+        randomWord(); 
         button();
-        problem();  
+        wordChallenge();  
     }
     else if (chosenDifficulty === 1)
     {
         randomWords=hardWords;
         chance=5;
-        random(); 
+        document.getElementById('chances').innerHTML= chance;
+        randomWord(); 
         button();
-        problem();  
+        wordChallenge();  
     }
 
 }
