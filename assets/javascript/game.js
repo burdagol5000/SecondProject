@@ -1,15 +1,15 @@
-
+//variables declared to be used on the game
 let word='';
 let randomWords='';
 let correct = [];
 let words=null;
-
-
+var normalWords=["ELEPHANT","ZEBRA","CANADA","EUROPE","ASIA","AMERICA","BLUE","BLACK","VIOLET","PANDA"];
+var hardWords=["FILTER","EUPHORIA","COLLAGEN"," MAGNESIUM","PHILIPPINES","DEMENTIA","RAGNAROK","ANDROMEDA","ESSENTIAL","GASTROENTERITIS"];
 //function to generate a random word from the array
-function random() {
-    word = randomWords[Math.floor(Math.random() * randomWords.length)];
+function random() 
+{
+     word = randomWords[Math.floor(Math.random() * randomWords.length)];
 }
-
 //function to generate the buttons to be used to play the game
 function button() 
 {
@@ -53,7 +53,8 @@ function zerochances()
 {
     if (chance === 0) { 
     document.getElementById('bombs').src = 'assets/images/nuke.jpg';
-    document.getElementById('letters').innerHTML = '<a href="index.html">Back</a>';
+    document.getElementById('problem').innerHTML= 'The Word is '+word;
+    document.getElementById('letters').innerHTML = '<a href="index.html">RESET!</a>';
     }
 }
 
@@ -62,12 +63,42 @@ function guessedword()
 {
     if (words === word) {
     document.getElementById('bombs').src = 'assets/images/gjob2.jpg';
-    document.getElementById('letters').innerHTML = '<a href="index.html">Back</a>';
+    document.getElementById('problem').innerHTML= 'Congratulations You won!';
+    document.getElementById('letters').innerHTML = '<a href="index.html">RESET!</a>';
     }
 }
-random(); 
-button();
-problem();  
+//function that handles the chosing of difficulty, then it will sort out what group of words to be 
+//randomized and start the other functions for the game to start
+function level(level) 
+{
+    const gameboard=document.getElementById("gameboard");
+    const levels= document.getElementById("levels");
+    if (gameboard.style.display === "none") 
+    {
+        gameboard.style.display = "block";
+        levels.style.display = "none";
+        
+    } else
+    {
+        gameboard.style.display = "none";
+    }
+    let chosenDifficulty = level;
 
-    
+    if (chosenDifficulty === 0)
+    {
+        randomWords=normalWords;
+        chance=8;
+        random(); 
+        button();
+        problem();  
+    }
+    else if (chosenDifficulty === 1)
+    {
+        randomWords=hardWords;
+        chance=5;
+        random(); 
+        button();
+        problem();  
+    }
 
+}
