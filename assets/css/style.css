@@ -3,16 +3,16 @@ img{
 }
 #homelink{
     text-align: center;
-    padding-top:30px;
+    padding-top:20px;
     width:100%;
 }
 #homelink button{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 25px;
 }
 #homelink button a{
     text-decoration: none;
     color:black;
+    font-family:'Press Start 2P', cursive;
 }
 div #levels button{
     font-size:50px;
@@ -21,48 +21,68 @@ div #levels button{
     text-align: center;
     width:100%;
 }
-div #bomb{
+.container h1{
+    font-family:'Press Start 2P', cursive;
+}
+.container #bomb{
     width:25%;
     margin:auto;
 }
-div #start{
+.container #start{
     text-align: center;
     padding-top:40px;
     display:block;
 }
-div #start button{
+.container #start button{
     font-size:50px;
     border-radius: 25px;
     border-style: solid;
     padding:10px 15px;
     cursor: pointer;
+    font-family:'Press Start 2P', cursive;
 }
-div #start button:hover{
+.container #start button:hover{
     font-size:50px;
     border-radius: 25px;
     border-style: solid;
     padding:10px 15px;
     background-color:rgb(126, 144, 144);
     cursor: pointer;
+    color:white;
 }
-div #levels{
+.container #levels button{
+    font-size:50px;
+    border-radius: 25px;
+    border-style: solid;
+    padding:10px 15px;
+    cursor: pointer;
+    font-family:'Press Start 2P', cursive;
+}
+.container #levels{
     padding-top:40px;
 }
-
-div #levels p{
+.container #levels button:hover{
+    font-size:50px;
+    border-radius: 25px;
+    border-style: solid;
+    padding:10px 15px;
+    background-color:rgb(126, 144, 144);
+    cursor: pointer;
+    color:white;
+}
+.container #levels p{
     font-size:20px;
 }
-
 /*style for the game itself */
-div #problem{
+.container #problem{
     margin:30px;
 }
-div #limit{
+.container #limit{
     padding-top:20px;
     padding-bottom:20px;
     margin:20px;
 }
-div #letters button{
+.container #letters button{
    padding:10px;
     font-size:20px;
     display: inline-block;
@@ -70,12 +90,12 @@ div #letters button{
     margin-top:10px;
     margin-bottom:10px;
 }
-div #letters button:hover{
+.container #letters button:hover{
     background-color: rgb(65, 44, 44);
     color:antiquewhite;
     cursor: pointer;
 }
-div #letters a{
+.container #letters a{
     text-decoration: none;
     border-radius: 5px;
     border-style:solid;
@@ -86,7 +106,6 @@ div #letters a{
     margin:30px;
     cursor: pointer;
 }
-
 @media (min-width:1200px){
     .container{
         width:100%;
