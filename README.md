@@ -56,7 +56,16 @@ Defuse the bomb was made from the combination of HTML, CSS and Javascript. The d
 <ol>
 <li>The function level() was not clearly passing the array to the randomWords variable which was needed on randomWord function to get a random word from the list on the array. Was able to solve it when I called the functions randomWord,buttonsGenerated and wordChallenge inside the if statements rather than outside the function of level.
 <li>The changes I made on gitpod was not reflecting on real time. Solved the problem when I unpublish and republish my page.
-<li>
+<li>The argument I wanted to pass using the eventhandler was not being passed. Solved the problem by searching how to pass arguments using the eventhandler.</li>
+</ol>
+<h2>Future Updates Planned</h2>
+<ul>
+<li>Scoring System for players</li>
+<li>Input of player name and storing them with their score</li>
+<li>More Difficulty Settings</li>
+<li>More words from the category</li>
+<li>Player that scored the highest for the Month will get his name posted on the frontpage for the month.</li>
+</ul>
 <h2>Deployment</h2>
 
 Defuse the Bomb was Deployed using Github Pages. The steps I took the deploy Defuse the Bomb were as follows:<br/>
@@ -68,10 +77,12 @@ Defuse the Bomb was Deployed using Github Pages. The steps I took the deploy Def
 <h2>Credits</h2>
 
 <ul>
-
-<li>Javascript Tutorial from SuperSimpleDev on Youtube (https://www.youtube.com/@SuperSimpleDev)</li>
-<li>Javascript Tutorial from Programming with Mosh (https://www.youtube.com/@programmingwithmosh)</li>
-<li>Javascript Tutorial from freeCodeCamp.org (https://www.youtube.com/@freecodecamp)</li>
+<li>Javascript Tutorial for beginners from SuperSimpleDev on Youtube (https://www.youtube.com/watch?v=DqaTKBU9TZk&t=3636s)</li>
+<li>Javascript Tutorial for beginners from Programming with Mosh (https://www.youtube.com/watch?v=W6NZfCO5SIk&t=1s)</li>
+<li>Javascript Tutorial for beginners from freeCodeCamp.org (https://www.youtube.com/watch?v=PkZNo7MFNFg&t=3832s)</li>
 <li>Form Validation from Code Institute LMS</li>
 <li>stack overflow forums for answering some of my questions. https://stackoverflow.com/questions/</li>
+<li>W3schools for the tutorials especially the eventhandlers (https://www.w3schools.com/js/js_htmldom_eventlistener.asp)
+<li>W3schools for the ES6 features list (https://www.w3schools.com/Js/js_es6.asp)
+<li>Google Fonts for the font I used on Defuse the bomb (https://fonts.google.com/)
 </ul>
