@@ -1,4 +1,8 @@
-function difficulty() {
+var start=document.getElementById("startingButton");
+start.addEventListener("click", difficulty());
+
+function difficulty() 
+{
     const LEVELS = document.getElementById("levels");
     const START= document.getElementById("start");
  
