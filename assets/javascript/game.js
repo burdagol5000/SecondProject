@@ -1,3 +1,7 @@
+var level1=document.getElementById("startingButton");
+var level2=document.getElementById("startingButton");
+start.addEventListener("level1", level(0));
+start.addEventListener("level2", level(1));
 //variables declared to be used on the game
 let word=null;
 let randomWords='';
@@ -74,6 +78,7 @@ function playerWon()
 //randomized and start the other functions for the game to start
 function level(level) 
 {
+    
     const GAMEBOARD=document.getElementById("gameboard");
     const LEVELS= document.getElementById("levels");
     if (GAMEBOARD.style.display === "none") 
