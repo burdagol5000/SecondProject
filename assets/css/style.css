@@ -80,6 +80,9 @@ div #levels button{
 .container #problem{
     margin:30px;
 }
+.container #gameboard{
+    display:none;
+}
 .container #gameboard #limit{
     font-family:'Courier New', Courier, monospace;
     font-size: 30px;

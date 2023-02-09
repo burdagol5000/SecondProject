@@ -1,7 +1,7 @@
-var level1=document.getElementById("startingButton");
-var level2=document.getElementById("startingButton");
-start.addEventListener("level1", level(0));
-start.addEventListener("level2", level(1));
+var level1=document.getElementById("level1");
+var level2=document.getElementById("level2");
+level1.addEventListener("click", function() { level(0); });
+level2.addEventListener("click", function() { level(1); });
 //variables declared to be used on the game
 let word=null;
 let randomWords='';
@@ -78,14 +78,14 @@ function playerWon()
 //randomized and start the other functions for the game to start
 function level(level) 
 {
-    
     const GAMEBOARD=document.getElementById("gameboard");
     const LEVELS= document.getElementById("levels");
+    const START= document.getElementById("start");
     if (GAMEBOARD.style.display === "none") 
     {
         GAMEBOARD.style.display = "block";
         LEVELS.style.display = "none";
-        
+        START.style.display = "none";
     } else
     {
         GAMEBOARD.style.display = "none";
