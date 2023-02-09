@@ -1,5 +1,5 @@
-var level1=document.getElementById("level1");
-var level2=document.getElementById("level2");
+let level1=document.getElementById("level1");
+let level2=document.getElementById("level2");
 level1.addEventListener("click", function() { level(0); });
 level2.addEventListener("click", function() { level(1); });
 //variables declared to be used on the game
@@ -7,8 +7,8 @@ let word=null;
 let randomWords='';
 let correct = [];
 let words=null;
-var normalWords=["ELEPHANT","ZEBRA","CANADA","EUROPE","ASIA","AMERICA","BLUE","BLACK","VIOLET","PANDA"];
-var hardWords=["FILTER","EUPHORIA","COLLAGEN"," MAGNESIUM","PHILIPPINES","DEMENTIA","RAGNAROK","ANDROMEDA","ESSENTIAL","GASTROENTERITIS"];
+let normalWords=["ELEPHANT","ZEBRA","CANADA","EUROPE","ASIA","AMERICA","BLUE","BLACK","VIOLET","PANDA"];
+let hardWords=["FILTER","EUPHORIA","COLLAGEN"," MAGNESIUM","PHILIPPINES","DEMENTIA","RAGNAROK","ANDROMEDA","ESSENTIAL","GASTROENTERITIS"];
 //function to generate a random word from the array
 function randomWord() 
 {
