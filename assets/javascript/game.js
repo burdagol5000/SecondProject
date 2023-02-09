@@ -11,7 +11,7 @@ function randomWord()
      word = randomWords[Math.floor(Math.random() * randomWords.length)];
 }
 //function to generate the buttons to be used to play the game
-function button() 
+function buttonsGenerated() 
 {
     let buttons = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('').map(letter =>   
         `<button id='` + letter + `'onClick="buttonGuessing('` + letter + `')"> ` + letter + `</button> `).join(''); 
@@ -33,7 +33,7 @@ function buttonGuessing(chosen)
     //else if the clicked button/letter is not on the random word, deduct the number of chances,execute chances() function and zerochances() function
     chance--;
     updateChance();
-    zerochances()
+    zeroChancesLeft()
     }
 }
 //function that will generate the spaces where letters will appear if successfully guessed
@@ -48,7 +48,7 @@ function updateChance()
     document.getElementById('chances').innerHTML = chance;
 }
 //function that will check if chance reaches 0, then player loses the game
-function zerochances() 
+function zeroChancesLeft() 
 {
     if (chance === 0) { 
     document.getElementById('bombs').src = 'assets/images/nuke.jpg';
@@ -74,16 +74,16 @@ function playerWon()
 //randomized and start the other functions for the game to start
 function level(level) 
 {
-    const gameboard=document.getElementById("gameboard");
-    const levels= document.getElementById("levels");
-    if (gameboard.style.display === "none") 
+    const GAMEBOARD=document.getElementById("gameboard");
+    const LEVELS= document.getElementById("levels");
+    if (GAMEBOARD.style.display === "none") 
     {
-        gameboard.style.display = "block";
-        levels.style.display = "none";
+        GAMEBOARD.style.display = "block";
+        LEVELS.style.display = "none";
         
     } else
     {
-        gameboard.style.display = "none";
+        GAMEBOARD.style.display = "none";
     }
     let chosenDifficulty = level;
 
@@ -93,7 +93,7 @@ function level(level)
         chance=8;
         document.getElementById('chances').innerHTML= chance;
         randomWord(); 
-        button();
+        buttonsGenerated();
         wordChallenge();  
     }
     else if (chosenDifficulty === 1)
@@ -102,7 +102,7 @@ function level(level)
         chance=5;
         document.getElementById('chances').innerHTML= chance;
         randomWord(); 
-        button();
+        buttonsGenerated();
         wordChallenge();  
     }
 }
