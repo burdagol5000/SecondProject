@@ -1,5 +1,5 @@
 //variables declared to be used on the game
-let word='';
+let word=null;
 let randomWords='';
 let correct = [];
 let words=null;
