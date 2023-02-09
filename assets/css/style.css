@@ -77,6 +77,16 @@ div #levels button{
 .container #problem{
     margin:30px;
 }
+.container #gameboard #limit{
+    font-family:'Courier New', Courier, monospace;
+    font-size: 30px;
+}
+.container #gameboard #limit a{
+    font-family:'Courier New', Courier, monospace;
+    font-size: 30px;
+    text-decoration: none;
+    color:red;
+}
 .container #limit{
     padding-top:20px;
     padding-bottom:20px;

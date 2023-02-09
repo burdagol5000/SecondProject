@@ -54,7 +54,10 @@ function zerochances()
     if (chance === 0) { 
     document.getElementById('bombs').src = 'assets/images/nuke.jpg';
     document.getElementById('problem').innerHTML= 'The Word is '+word;
-    document.getElementById('letters').innerHTML = '<a href="index.html">RESET!</a>';
+    document.getElementById('limit').innerHTML= '<a href="index.html">RESET!</a>';
+    document.getElementById('letters').innerHTML = '';
+    document.getElementById('homelink').innerHTML =  '';
+    
     }
 }
 
@@ -64,7 +67,9 @@ function playerWon()
     if (words === word) {
     document.getElementById('bombs').src = 'assets/images/gjob2.jpg';
     document.getElementById('problem').innerHTML= 'Congratulations You won!';
-    document.getElementById('letters').innerHTML = '<a href="index.html">RESET!</a>';
+    document.getElementById('limit').innerHTML= '<a href="index.html">RESET!</a>';
+    document.getElementById('letters').innerHTML = '';
+    document.getElementById('homelink').innerHTML =  '';
     }
 }
 //function that handles the chosing of difficulty, then it will sort out what group of words to be 
