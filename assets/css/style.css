@@ -83,7 +83,7 @@ div #levels button{
 }
 .container #gameboard #limit a{
     font-family:'Courier New', Courier, monospace;
-    font-size: 30px;
+    font-size: 40px;
     text-decoration: none;
     color:red;
 }

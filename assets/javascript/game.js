@@ -47,7 +47,6 @@ function updateChance()
 {
     document.getElementById('chances').innerHTML = chance;
 }
-
 //function that will check if chance reaches 0, then player loses the game
 function zerochances() 
 {
@@ -57,7 +56,6 @@ function zerochances()
     document.getElementById('limit').innerHTML= '<a href="index.html">RESET!</a>';
     document.getElementById('letters').innerHTML = '';
     document.getElementById('homelink').innerHTML =  '';
-    
     }
 }
 
@@ -107,5 +105,4 @@ function level(level)
         button();
         wordChallenge();  
     }
-
 }
