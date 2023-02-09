@@ -52,6 +52,11 @@ Defuse the bomb was made from the combination of HTML, CSS and Javascript. The d
 <img src="assets/images/game.png"></img>
 <br/><br/>
 <br/>
+<h2>BUGS</h2>
+<ol>
+<li>The function level() was not clearly passing the array to the randomWords variable which was needed on randomWord function to get a random word from the list on the array. Was able to solve it when I called the functions randomWord,buttonsGenerated and wordChallenge inside the if statements rather than outside the function of level.
+<li>The changes I made on gitpod was not reflecting on real time. Solved the problem when I unpublish and republish my page.
+<li>
 <h2>Deployment</h2>
 
 Defuse the Bomb was Deployed using Github Pages. The steps I took the deploy Defuse the Bomb were as follows:<br/>
